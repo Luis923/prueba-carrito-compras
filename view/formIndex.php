@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="main">
-        <img class="imageMain" src="src/images/tienda.jpg" class="img-fluid " alt="tienda">
+        <img class="imageMain" src="src/images/electrodomesticos.jpg" class="img-fluid " alt="tienda">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="formMain col-10 bg-white mt-5 p-4 rounded">

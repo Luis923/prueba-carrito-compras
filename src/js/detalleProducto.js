@@ -9,9 +9,16 @@ function añadirCarrito() {
     console.log("añadirCarrito");
 
     let total = parseFloat(precio.innerHTML) * parseFloat(cantidad.value)
-
     let productosLocalJson = sessionStorage.getItem("productos");
-    let productos = JSON.parse(productosLocalJson) == null ? [] : JSON.parse(productosLocalJson)
+    if(productosLocalJson == null){
+        let arregloAux = [];
+        sessionStorage.setItem("productos",JSON.stringify(arregloAux) );
+        productosLocalJson = sessionStorage.getItem("productos");
+    }
+    let productos
+    if( productosLocalJson != "" || productosLocalJson != null){
+        productos = JSON.parse(productosLocalJson)
+    }
 
     productos.push({
         "foto": linkImage.innerHTML,
